@@ -8,7 +8,16 @@ const options = {
       title: "CRUD API",
       description: "API documentation for CRUD application",
     },
-    host: "localhost:3001",
+    servers: [
+      {
+        url: "http://localhost:3001",
+        description: "Development server",
+      },
+      {
+        url: "https://projectmanagement-nodejs.onrender.com",
+        description: "Production server",
+      },
+    ],
     components: {
       schemas: {
         Member: {
