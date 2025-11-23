@@ -42,9 +42,9 @@ export const validateProjectNotFound = async (projectId) => {
 export const validateMemberNotEqualOwner = async (ownerId, memberId) => {
   try {
     memberId.map((member) => {
-      console.log("owner - member:", {ownerId, member})
+      console.log("owner - member:", { ownerId, member });
       if (member == ownerId)
-        throw { status: 409, message: "MEMBER_NOT_EQUAL_OWNER" };
+        throw { status: 404, message: "MEMBER_NOT_EQUAL_OWNER" };
     });
   } catch (error) {
     console.log("validate: ", error);
@@ -56,10 +56,10 @@ export const validateMemberNotEqualMember = async (memberId) => {
   try {
     let check = 0;
     for (let i = 0; i < memberId.length; i++) {
-      for (let j = memberId.length; j > i ; j--) {
+      for (let j = memberId.length; j > i; j--) {
         if (memberId[i] === memberId[j]) check++;
         if (check === 1)
-          throw { status: 409, message: "MEMBER_NOT_EQUAL_MEMBER" };
+          throw { status: 404, message: "MEMBER_NOT_EQUAL_MEMBER" };
       }
     }
   } catch (error) {

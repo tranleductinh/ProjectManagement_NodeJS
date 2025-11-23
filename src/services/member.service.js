@@ -15,12 +15,12 @@ export const validateMemberNotFoud = async (_id) => {
 export const validateEmailMemberExists = async (email) => {
   try {
     const member = await Member.findOne({ email: email });
-    if (member) throw { status: 409, message: "EMAIL_ALREADY_EXISTS" };
+    if (member) throw { status: 404, message: "EMAIL_ALREADY_EXISTS" };
   } catch (error) {
     console.log("validate: ", error);
     throw error;
   }
-}
+};
 
 export const validateEmailNotFormat = async (email) => {
   try {

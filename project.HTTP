@@ -18,8 +18,8 @@
 #     "members": []
 # }
 
-GET http://localhost:3001/api/projects
-Content-Type: application/json
-
-# DELETE http://localhost:3001/api/projects/69227ce3a08cdcee729feb8c
+# GET http://localhost:3001/api/projects
 # Content-Type: application/json
+
+DELETE http://localhost:3001/api/projects/1
+Content-Type: application/json

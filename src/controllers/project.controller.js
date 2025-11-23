@@ -15,7 +15,7 @@ export const createProject = async (req, res) => {
     if (!errors.isEmpty())
       return error(res, "Validation failed", 400, errors.array());
     await validateOwnerNotFound(req.body.owner);
-    console.log("MEMBERS: ", req.body.members)
+    console.log("MEMBERS: ", req.body.members);
     await validateMemberNotFoud(req.body.members);
     await validateMemberNotEqualOwner(req.body.owner, req.body.members);
     await validateMemberNotEqualMember(req.body.members);
@@ -77,7 +77,6 @@ export const deleteProject = async (req, res) => {
   } catch (err) {
     if (err && err.status && err.message)
       return error(res, "Project deleted failed", err.status, err.message);
-    error(res, 500, "INTERNAL_SERVER_ERROR");
     error(res, err.message);
   }
 };
