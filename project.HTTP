@@ -1,0 +1,25 @@
+# POST http://localhost:3001/api/projects
+# Content-Type: application/json
+
+# {
+#     "name": "QUAN LY PROJECT NEWxsss",
+#     "description": "okêokêôsssss",
+#     "owner": "69205b61c70990970903adec",
+#     "members": []
+# }
+
+# PUT http://localhost:3001/api/projects/69227cd796cdff962436bc12
+# Content-Type: application/json
+
+# {
+#     "name": "QUAN LY PROJECT NEW adrrr",
+#     "description": "okêokêô",
+#     "owner": "69205b61c70990970903adec",
+#     "members": []
+# }
+
+GET http://localhost:3001/api/projects
+Content-Type: application/json
+
+# DELETE http://localhost:3001/api/projects/69227ce3a08cdcee729feb8c
+# Content-Type: application/json

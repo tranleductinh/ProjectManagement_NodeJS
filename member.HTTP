@@ -1,0 +1,15 @@
+POST http://localhost:3001/api/members
+Content-Type: application/json
+
+{
+    "name": "Thao",
+    "email": "tt@gmail.com"
+}
+
+# GET http://localhost:3001/api/members
+# Content-Type: application/json
+
+# DELETE http://localhost:3001/api/members/69205ab026137e46c935ed9d
+# Content-Type: application/json
+
+
